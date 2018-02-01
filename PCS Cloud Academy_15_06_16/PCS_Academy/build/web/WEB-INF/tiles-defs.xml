@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<tiles-definitions>
+    
+    <definition name="homelayout" path="/home.jsp">
+        <put name="header" value="/jsp/home/header.jsp" />
+        <put name="menu" value="/jsp/home/menu.jsp" />
+        <put name="footer" value="/jsp/home/footer.jsp" />
+        <put name="body" value="/jsp/home/body.jsp" />
+    </definition>
+    <definition name="homelayout2" path="/home2.jsp">
+        <put name="header2" value="/jsp/home/header2.jsp" />
+        <put name="menu" value="/jsp/home/menu.jsp" />
+        <put name="footer" value="/jsp/home/footer.jsp" />
+        <put name="body" value="/jsp/home/body.jsp" />
+    </definition>
+    
+    <definition name="aboutus" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/aboutus/aboutus.jsp" />
+    </definition>
+    
+    <definition name="networkingcoursetitles" extends="homelayout2">
+        <put name="body" value="/jsp/content/network-at-pcs.jsp" />
+    </definition>
+    <definition name="aboutus-companyprofile" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/aboutus/company-profile.jsp" />
+    </definition>
+    <definition name="aboutus-whypcsacademy" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/aboutus/why-pssacademy.jsp" />
+    </definition>
+    <definition name="aboutus-missionvission" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/aboutus/missionvission.jsp" />
+    </definition>
+    <definition name="trainning" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/training/trainning.jsp" />
+    </definition>
+    <definition name="trainning-coprate" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/training/corporatetrainning.jsp" />
+    </definition>
+    <definition name="trainning-industry" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/training/indurstrytrainning.jsp" />
+    </definition>
+    <definition name="trainning-summer" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/training/summertrainning.jsp" />
+    </definition>
+    <definition name="trainning-winter" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/training/wintertrainning.jsp" />
+    </definition>
+    <definition name="trainning-internship" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/training/internship.jsp" />
+    </definition>
+    
+     <definition name="phptiles" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/phpmysql.jsp" />
+    </definition>
+   <definition name="androidtiles" extends="homelayout2">
+        <put name="body" value="/jsp/content/Mobile-apps-at-pcs.jsp" />
+    </definition>
+    <definition name="javatiles" extends="homelayout2">
+        <put name="body" value="/jsp/content/AdvJava-at-pcs.jsp" />
+    </definition>
+   <definition name="advacedjavatitles" extends="homelayout2">
+        <put name="body" value="/jsp/content/AdvJava-at-pcs.jsp" />
+    </definition>
+    <definition name="trainning-onjob" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/java-j2ee.jsp" />
+    </definition>
+    <definition name="trainning-projectguide" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/training/projectguide.jsp" />
+    </definition>
+    <definition name="trainning-corporatehrtraining" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/training/corporate-hr-training.jsp" />
+    </definition>  
+    <definition name="course-crystalreport" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/crystalreport.jsp" />
+    </definition>
+    <definition name="course-windowsmobileapp" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/windowsmobile-app.jsp" />
+    </definition>
+    <definition name="course-mvcarchitecture" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/mvcarchitecture.jsp" />
+    </definition>
+    <definition name="course-javaj2ee" extends="homelayout2">
+        <put name="body" value="/jsp/content/CoreJava-at-pcs.jsp" />
+    </definition>
+    <definition name="course-aspnet" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/aspnet.jsp" />
+    </definition>
+    <definition name="course-php" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/phpmysql.jsp" />
+    </definition>
+    
+    <definition name="webdesigntiles" extends="homelayout2">
+        <put name="body" value="/jsp/content/why-intern-at-pcs.jsp" />
+    </definition>
+    <definition name="moredetailstiles" extends="homelayout2">
+        <put name="body" value="/jsp/content/welcome-pcs.jsp" />
+    </definition>
+<!--    <definition name="ourse-androidc" extends="homelayout2">
+        <put name="body" value="/jsp/content/Mobile-apps-at-pcs.jsp" />
+    </definition>-->
+    <definition name="course-android" extends="homelayout2">
+        <put name="body" value="/jsp/content//Mobile-apps-at-pcs.jsp" />
+    </definition>
+    
+    
+    <definition name="course-cloudcomputing" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/cloudcomputing.jsp" />
+    </definition>
+    <definition name="course-ethicalhacking" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/ethicalhacking.jsp" />
+    </definition>
+    <definition name="course-bigdata" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/bigdata.jsp" />
+    </definition>
+    <definition name="course-webdesign" extends="homelayout2">
+        <put name="body" value="/jsp/content/Web-desiging-at-pcs.jsp" />
+    </definition>
+    <definition name="course-testing" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/testing.jsp" />
+    </definition>
+    <definition name="course-dba" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/dba.jsp" />
+    </definition>
+    <definition name="course-softskils" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/course/softskils.jsp" />
+    </definition>  
+    <definition name="studentRegnBeforeAdmsn" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/student/student_regn.jsp" />
+    </definition> 
+     
+   
+    <!--student profile-->
+   
+    <definition name="student-profile" extends="homelayout2">
+        <put name="menu" value="/jsp/home/profile-menu.jsp" />
+        <put name="body" value="/jsp/home/header/student/student-profile.jsp" />
+    </definition>
+    
+    <definition name="select-new-course" extends="homelayout2">
+        <put name="menu" value="/jsp/home/profile-menu.jsp" />
+        <put name="body" value="/jsp/home/header/student/select-new-course.jsp" />
+    </definition>
+    <definition name="student-course-details" extends="homelayout2">
+        <put name="menu" value="/jsp/home/profile-menu.jsp" />
+        <put name="body" value="/jsp/home/header/student/selected-course-details.jsp" />
+    </definition>
+    <definition name="registrationdetails" extends="homelayout2">
+        <put name="menu" value="/jsp/home/profile-menu.jsp" />
+        <put name="body" value="/jsp/home/header/student/registrationdetails.jsp" />
+    </definition>
+    <definition name="paymentdetails" extends="homelayout2">
+        <put name="menu" value="/jsp/home/profile-menu.jsp" />
+        <put name="body" value="/jsp/home/header/student/paymentdetails.jsp" />
+    </definition>
+    <definition name="student-logout" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/student/student-login.jsp" />
+    </definition>
+    
+    <definition name="studentRegnBeforeAdmsn-success" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/student/student_regn2.jsp" />
+    </definition>
+    <definition name="studentRegnBeforeAdmsn-error" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/student/student_regn.jsp" />
+    </definition>
+    <definition name="contactus" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/contactus.jsp" />
+    </definition>   
+    <definition name="contactussuccess" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/contactus.jsp" />
+    </definition>
+    <definition name="contactusfail" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/contactus.jsp" />
+    </definition> 
+    <definition name="faq" extends="homelayout2">
+        <put name="body" value="/jsp/home/header/faq.jsp" />
+    </definition>
+    <definition name="career" extends="homelayout2">
+        <put name="body" value="/jsp/home/footer/career.jsp" />
+    </definition>
+    <definition name="sitemap" extends="homelayout2">
+        <put name="body" value="/jsp/home/footer/sitemap.jsp" />
+    </definition>
+
+  
+  
+   <definition name="why-intern-at-pcs" extends="homelayout2">
+        <put name="body" value="/jsp/content/why-intern-at-pcs.jsp" />
+    </definition>
+     <definition name="whypcsacademytiles" extends="homelayout2">
+        <put name="body" value="/jsp/content/why-intern-at-pcs.jsp" />
+    </definition>
+
+     <!--  Admin Layout -->
+
+    <definition name="adminLayout" path="/jsp/admin/layout.jsp">
+        <put name="title" value="Admin Tittle"/>
+        <put name="header" value="/jsp/admin/after-login-header.jsp"/>
+        <put name="leftmenu" value="/jsp/admin/leftmenu.jsp"/>
+        <put name="body" value="/jsp/admin/body.jsp"/>
+        <put name="footer" value="/jsp/admin/footer.jsp"/>
+    </definition>   
+    <definition name="adminLoginLayout" path="/jsp/admin/admin-login-layout.jsp">
+        <put name="title" value="Admin Tittle"/>
+        <put name="header" value="/jsp/admin/header.jsp"/>
+        <put name="body" value="/jsp/admin/body.jsp"/>
+        <put name="footer" value="/jsp/admin/footer.jsp"/>
+    </definition>
+    <definition name="adminlogin"  extends="adminLoginLayout">       
+        <put name="body" value="/jsp/admin/adminlogin.jsp"/>      
+    </definition> 
+    <definition name="changeAdminPassword"  extends="adminLayout">       
+        <put name="body" value="/jsp/admin/admin-change-password.jsp"/>      
+    </definition>
+    <definition name="changeAdminPassword2"  extends="adminLoginLayout">       
+        <put name="body" value="/jsp/admin/adminlogin.jsp"/>      
+    </definition> 
+    <definition name="changeAdminPassword3"  extends="adminLayout">       
+        <put name="body" value="/jsp/admin/admin-change-password.jsp"/>      
+    </definition> 
+    <definition name="changeAdminPassword32"  extends="adminLayout">       
+        <put name="body" value="/jsp/admin/admin-change-password.jsp"/>      
+    </definition> 
+    <definition name="addtrainingcatg" extends="adminLayout">
+        <put name="body" value="/jsp/admin/add_category.jsp" />
+    </definition>
+    <definition name="addtrainingcatg2" extends="adminLayout">
+        <put name="body" value="/jsp/admin/add_category.jsp" />
+    </definition>
+    <definition name="viewSearchEditDelete-category" extends="adminLayout">
+        <put name="body" value="/jsp/admin/view-search-edit-delete-category.jsp" />
+    </definition>
+    <definition name="addtrainingcourse" extends="adminLayout">
+        <put name="body" value="/jsp/admin/add_course.jsp" />
+    </definition>
+    <definition name="addtrainingcourse2" extends="adminLayout">
+        <put name="body" value="/jsp/admin/add_course.jsp" />
+    </definition>  
+    <definition name="viewSearchEditDelete-course" extends="adminLayout">
+        <put name="body" value="/jsp/admin/view-search-edit-delete-course.jsp" />
+    </definition>     
+    <definition name="addfaculty" extends="adminLayout">
+        <put name="body" value="/jsp/admin/add_faculty.jsp" />
+    </definition>
+    <definition name="addfaculty2" extends="adminLayout">
+        <put name="body" value="/jsp/admin/add_faculty.jsp" />
+    </definition> 
+    <definition name="viewSearchEditDelete-faculty" extends="adminLayout">
+        <put name="body" value="/jsp/admin/view-search-edit-delete-faculty.jsp" />
+    </definition>    
+    <definition name="addBatch" extends="adminLayout">
+        <put name="body" value="/jsp/admin/add-batch.jsp" />
+    </definition>
+    <definition name="addBatch2" extends="adminLayout">
+        <put name="body" value="/jsp/admin/add-batch.jsp" />
+    </definition>
+    <definition name="viewSearchEditDelete-batch" extends="adminLayout">
+        <put name="body" value="/jsp/admin/view-search-edit-delete-batch.jsp" />
+    </definition>   
+    <definition name="addstudentdetails" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student_regn_after_admission.jsp" />
+    </definition>
+    <definition name="addstudentdetails2" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student_regn_after_admission2.jsp" />
+    </definition>
+    <definition name="addstudentdetails3" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student_regn_after_admission.jsp" />
+    </definition>
+    
+    
+    
+    <definition name="payViewSearch-StudentDuePayment" extends="adminLayout">
+        <put name="body" value="/jsp/admin/pay-view-search-student-duePayment.jsp" />
+    </definition>
+    
+    <definition name="studentFeedBackInsertion" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student-feedback-insert.jsp" />
+    </definition>
+    
+    <definition name="viewSearch-StudentFeedBack" extends="adminLayout">
+        <put name="body" value="/jsp/admin/view-search-student-feedback.jsp" />
+    </definition>
+    
+    <definition name="viewcontactmsg" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student-contact-msg-view.jsp" />
+    </definition>
+
+
+
+    <definition name="viewSearchEditDelete-Student" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student_regn_details.jsp" />
+    </definition>
+    <definition name="showStudentRegnDetails" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student_regn_details.jsp" />
+    </definition>
+    <definition name="showStudentLoginDetails" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student_regn_details.jsp" />
+    </definition>
+<!--    view all couse detail-->
+    <definition name="viewallcoursetiles" extends="homelayout2">
+        <put name="body" value="/jsp/content/CourseDetailsAll.jsp" />
+    </definition>
+    
+    
+    <definition name="viewAllStudentPayment" extends="adminLayout">
+        <put name="body" value="/jsp/admin/student_payment_details.jsp"/>
+    </definition>
+
+
+    <definition name="${YOUR_DEFINITION_HERE}">
+    </definition>
+</tiles-definitions>

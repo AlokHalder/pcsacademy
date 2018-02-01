@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="PCS Cloud Academy_15_06_16">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <property name="context-root" value="PCS_Cloud_Academy_15_06_16"/>
+        <property name="java-output-path" value="/PCS Cloud Academy_15_06_16/PCS_Academy/build/web/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

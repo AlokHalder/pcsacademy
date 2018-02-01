@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="StudentPaymentDto" type="in.pcsacademy.model.dto.StudentPaymentDto"/>
+        <form-bean name="StudentRecordBean" type="in.pcsacademy.model.StudentRecordBean"/>
+        <form-bean name="StudentRegistrationDto" type="in.pcsacademy.model.dto.StudentRegistrationDto"/>
+        <form-bean name="SendMsgDto" type="in.pcsacademy.model.dto.SendMsgDto"/>
+        <form-bean name="AdminLoginDto" type="in.pcsacademy.model.dto.AdminDetailsDto"/>
+        <form-bean name="TrainingCategoryDto" type="in.pcsacademy.model.dto.TrainingCategoryDto"/> 
+        <form-bean name="TrainingCourseDto" type="in.pcsacademy.model.dto.TrainingCourseDto"/>    
+        <form-bean name="BatchDto" type="in.pcsacademy.model.dto.BatchDto"/>
+        <form-bean name="FacultyDto" type="in.pcsacademy.model.dto.FacultyDto"/>
+        <!--<form-bean name="StudentRegistrationAfterAdmissionDto" type="com.pcsacademy.model.dto.StudentRegistrationAfterAdmissionDto"/>-->
+    </form-beans>
+    
+    <global-exceptions></global-exceptions>
+
+    <global-forwards>
+        <!--<forward name="welcome"  path="/Welcome.do"/>-->
+    </global-forwards>
+
+    <action-mappings>
+        <!--home- header,footer-->
+        <action path="/home" forward="homelayout"/>
+        <action path="/aboutus" type="org.apache.struts.actions.ForwardAction" parameter="aboutus"/>
+<!--        from abdus -->
+
+<!--<action path="/whypcsacademy" type="org.apache.struts.actions.ForwardAction" parameter="webdesign"/>-->
+         <action path="/networking" type="org.apache.struts.actions.ForwardAction" parameter="networkingcoursetitles"/> 
+         <action path="/advacedjava" type="org.apache.struts.actions.ForwardAction" parameter="advacedjavatitles"/>
+        <action path="/whypcsacademyaction" type="org.apache.struts.actions.ForwardAction" parameter="webdesigntiles"/>
+        <action path="/why-intern-at-pcs" type="org.apache.struts.actions.ForwardAction" parameter="why-intern-at-pcs"/>
+        <action path="/welcome-pcs" type="org.apache.struts.actions.ForwardAction" parameter="welcome-pcstiles"/>
+        <action path="/companyprofile" type="org.apache.struts.actions.ForwardAction" parameter="aboutus-companyprofile"/>
+        <action path="/missionvission" type="org.apache.struts.actions.ForwardAction" parameter="aboutus-missionvission"/>
+        <action path="/trainning" type="org.apache.struts.actions.ForwardAction" parameter="trainning"/>
+        <action path="/corporatetrainning" type="org.apache.struts.actions.ForwardAction" parameter="trainning-coprate"/>
+        <action path="/indurstrytrainning" type="org.apache.struts.actions.ForwardAction" parameter="trainning-industry"/>
+        <action path="/summertrainning" type="org.apache.struts.actions.ForwardAction" parameter="trainning-summer"/>
+        <action path="/wintertrainning" type="org.apache.struts.actions.ForwardAction" parameter="trainning-winter"/>
+        <action path="/internship" type="org.apache.struts.actions.ForwardAction" parameter="trainning-internship"/>
+        <action path="/onjob-javaj2ee" type="org.apache.struts.actions.ForwardAction" parameter="trainning-onjob"/>
+        <action path="/projectguide" type="org.apache.struts.actions.ForwardAction" parameter="trainning-projectguide"/>                
+        <action path="/corporatehrtraining" type="org.apache.struts.actions.ForwardAction" parameter="trainning-corporatehrtraining"/>
+        <action path="/crystalreport" type="org.apache.struts.actions.ForwardAction" parameter="course-crystalreport"/>
+        <action path="/windowsmobileapp" type="org.apache.struts.actions.ForwardAction" parameter="course-windowsmobileapp"/>
+        <action path="/mvcarchitecture" type="org.apache.struts.actions.ForwardAction" parameter="course-mvcarchitecture"/>
+        <action path="/javaj2ee" type="org.apache.struts.actions.ForwardAction" parameter="course-javaj2ee"/>
+        <action path="/aspnet" type="org.apache.struts.actions.ForwardAction" parameter="course-aspnet"/>
+        <action path="/php" type="org.apache.struts.actions.ForwardAction" parameter="course-php"/>
+        <action path="/android" type="org.apache.struts.actions.ForwardAction" parameter="course-android"/>
+        <action path="/cloudcomputing" type="org.apache.struts.actions.ForwardAction" parameter="course-cloudcomputing"/>
+        <action path="/ethicalhacking" type="org.apache.struts.actions.ForwardAction" parameter="course-ethicalhacking"/>
+        <action path="/bigdata" type="org.apache.struts.actions.ForwardAction" parameter="course-bigdata"/>       
+        <action path="/webdesign" type="org.apache.struts.actions.ForwardAction" parameter="course-webdesign"/>
+        <action path="/testing" type="org.apache.struts.actions.ForwardAction" parameter="course-testing"/>
+        <action path="/dba" type="org.apache.struts.actions.ForwardAction" parameter="course-dba"/>
+        <action path="/softskils" type="org.apache.struts.actions.ForwardAction" parameter="course-softskils"/> 
+         <action path="/viewallcourse" type="org.apache.struts.actions.ForwardAction" parameter="viewallcoursetiles"/> 
+         <action path="/phpimgaction" type="org.apache.struts.actions.ForwardAction" parameter="phptiles"/> 
+         
+         <action path="/androidimgaction" type="org.apache.struts.actions.ForwardAction" parameter="androidtiles"/> 
+         <action path="/j2eeimageaction" type="org.apache.struts.actions.ForwardAction" parameter="javatiles"/> 
+         <action path="/moreaction" type="org.apache.struts.actions.ForwardAction" parameter="moredetailstiles"/>
+         <action path="/studentRegnBeforeAdmsn" type="in.pcsacademy.controller.StudentCon"  parameter="studentRegnBeforeAdmsn" scope="request">
+            <forward name="success" path="studentRegnBeforeAdmsn"/> 
+        </action>
+        <!--student profile--> 
+        <action path="/student-login" type="in.pcsacademy.controller.StudentCon" name="StudentRegistrationDto"  parameter="doStudentLogin" scope="request">
+            <forward name="success" path="student-profile"/> 
+            <forward name="error" path="student-logout"/> 
+        </action>
+        <action path="/student-profile" type="org.apache.struts.actions.ForwardAction" parameter="student-profile" scope="request"/>
+            
+        <action  path="/coursedetails" type="in.pcsacademy.controller.StudentCon" parameter="studentSelectedCourseDetails" validate="false" scope="request">
+            <forward name="success" path="student-course-details"/>
+            <forward name="error" path="student-logout"/> 
+        </action>  
+        
+        <action  path="/select-new-course" type="in.pcsacademy.controller.StudentCon" parameter="selectNewCourse" validate="false" scope="request">
+            <forward name="success" path="select-new-course"/>
+            <forward name="error" path="student-logout"/> 
+        </action>
+         
+        <action  path="/registrationdetails" type="in.pcsacademy.controller.StudentCon" parameter="registrationDetails" validate="false" scope="request">
+            <forward name="success" path="registrationdetails"/>
+            <forward name="error" path="student-logout"/> 
+        </action>
+        
+        <action  path="/paymentdetails" type="in.pcsacademy.controller.StudentCon" parameter="paymentDetails" validate="false" scope="request">
+            <forward name="success" path="paymentdetails"/>
+            <forward name="error" path="student-logout"/> 
+        </action>
+        
+        <action  path="/student-logout" type="in.pcsacademy.controller.StudentCon" parameter="doStudentlogout" validate="false" scope="request">
+            <forward name="success" path="student-logout"/>
+        </action>
+        
+        <action path="/studentRegnBeforeAdmsn2" name="StudentRegistrationDto" type="in.pcsacademy.controller.StudentCon" parameter="trainneregBeforeAdmisn" scope="request">
+            <forward name="success" path="studentRegnBeforeAdmsn-success"/> 
+            <forward name="error" path="studentRegnBeforeAdmsn-error"/>  
+        </action> 
+        <action path="/contactus" type="org.apache.struts.actions.ForwardAction" parameter="contactus"/>
+        <action path="/contactus2" name="SendMsgDto" type="in.pcsacademy.controller.StudentCon" scope="request" parameter="sendContactMsg">
+            <forward name="success" path="contactussuccess"/>
+            <forward name="error" path="contactusfail"/>
+        </action>      
+        <action path="/faq" type="org.apache.struts.actions.ForwardAction" parameter="faq"/>
+        <action path="/career" type="org.apache.struts.actions.ForwardAction" parameter="career"/>
+        <action path="/sitemap" type="org.apache.struts.actions.ForwardAction" parameter="sitemap"/>
+
+        <!--home- leftmenu,body-->
+        
+        
+        <!--admin-->
+        <action path="/admin-login-forward" name="AdminLoginDto" type="in.pcsacademy.controller.AdminCon" parameter="loginRecheck" scope="request">
+            <forward name="success" path="adminLayout"/>
+            <forward name="failure" path="adminlogin"/>        
+        </action>
+        <action path="/admin-login" name="AdminLoginDto" type="in.pcsacademy.controller.AdminCon"  parameter="login" validate="true" scope="request">
+            <forward name="success" path="adminLayout"/>
+            <forward name="failure" path="adminlogin"/>
+        </action>
+        <action  path="/logout" name="AdminLoginDto"  type="in.pcsacademy.controller.AdminCon" parameter="logout" validate="false" scope="request">
+            <forward name="success" path="adminlogin"/>
+        </action> 
+        <action path="/changeAdminPassword" type="org.apache.struts.actions.ForwardAction" parameter="changeAdminPassword"/>
+        <action path="/changeAdminPassword2" name="AdminLoginDto" type="in.pcsacademy.controller.AdminCon" parameter="changePassword" scope="request">
+            <forward name="success" path="changeAdminPassword2"/>
+            <forward name="failure" path="changeAdminPassword3"/>
+            <forward name="failurepasswordchange" path="changeAdminPassword32"/>
+        </action> 
+        <action path="/addtrainingcatg" name="TrainingCategoryDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="showTrainingCategory">
+            <forward name="success" path="addtrainingcatg" />
+        </action>       
+        <action path="/addtrainingcatg2" name="TrainingCategoryDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="addTrainingCategory">
+            <forward name="success" path="addtrainingcatg2" />
+            <forward name="error" path="addtrainingcatg2" />
+        </action>
+        <action path="/viewSearchEditDelete-category" type="org.apache.struts.actions.ForwardAction" parameter="viewSearchEditDelete-category"/>  
+        <action path="/addtrainingcourse" name="TrainingCourseDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="showTrainingCourse">
+            <forward name="success" path="addtrainingcourse" />
+        </action>       
+        <action path="/addtrainingcourse2" name="TrainingCourseDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="addTrainingCourse">
+            <forward name="success" path="addtrainingcourse2" />
+            <forward name="error" path="addtrainingcourse2" />
+        </action>
+        
+        <!--  added by suvankar-->
+        <action path="/viewSearchEditDelete-course" name="TrainingCourseDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="showTrainingCourse">
+            <forward name="success" path="viewSearchEditDelete-course" />
+        </action>      
+        <action path="/searchContent" name="TrainingCourseDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="showTrainingCourse">
+            <forward name="success" path="viewSearchEditDelete-course" />
+        </action>         
+        <action path="/deletecourse" name="TrainingCourseDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="deleteTrainingCourse">
+            <forward name="success" path="viewSearchEditDelete-course" />
+        </action>       
+        <action path="/updatecourse" name="TrainingCourseDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="updateTrainingCourse">
+            <forward name="success" path="viewSearchEditDelete-course" />
+        </action>      
+        <action path="/updatecourse2" name="TrainingCourseDto"  scope="request" type="in.pcsacademy.controller.AdminCon2" parameter="updateTrainingCourse" >
+            <forward name="success" path="viewSearchEditDelete-course" />
+        </action>      
+        <action path="/viewSearchEditDelete-category" name="TrainingCategoryDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="viewSearchEditDeleteCategory">  
+            <forward name="success" path="viewSearchEditDelete-category" />
+        </action>
+        <action path="/viewcoursecontent" name="TrainingCourseDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="viewCourseContent">  
+            <forward name="success" path="viewSearchEditDelete-course" />
+        </action>     
+        <!--  finish-->
+        
+        <action path="/addfaculty" name="FacultyDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="addFaculty">
+            <forward name="success" path="addfaculty" />
+        </action>
+        <action path="/addfaculty2" name="FacultyDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="addFaculty2">
+            <forward name="success" path="addfaculty2" />
+            <forward name="error" path="addfaculty2" />
+        </action>
+        <action path="/viewSearchEditDelete-faculty" type="in.pcsacademy.controller.AdminCon2" parameter="viewSearchEditDeletefaculty">
+            <forward name="success" path="viewSearchEditDelete-faculty" />
+        </action>
+        
+        <action path="/searchfaculty" type="in.pcsacademy.controller.AdminCon2" name="FacultyDto" parameter="viewSearchEditDeletefaculty">
+            <forward name="success" path="viewSearchEditDelete-faculty" />
+        </action>  
+        
+        <action path="/updatefaculty" type="in.pcsacademy.controller.AdminCon2" name="FacultyDto" parameter="viewSearchEditDeletefaculty">
+            <forward name="success" path="viewSearchEditDelete-faculty" />
+        </action> 
+        <action path="/updatefaculty2" type="in.pcsacademy.controller.AdminCon2" name="FacultyDto" parameter="viewSearchEditDeletefaculty">
+            <forward name="success" path="viewSearchEditDelete-faculty" />
+        </action> 
+        <action path="/addTrainingBatch" name="BatchDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="addBatch">
+            <forward name="success" path="addBatch" />
+        </action>
+        <action path="/addTrainingBatch2" name="BatchDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="addBatch2">
+            <forward name="success" path="addBatch2" />
+            <forward name="error" path="addBatch2" />
+        </action>
+        <action path="/viewSearchEditDelete-batch" type="org.apache.struts.actions.ForwardAction" parameter="viewSearchEditDelete-batch"/>     
+        <action path="/addstudentdetails" name="StudentRegistrationDto" type="in.pcsacademy.controller.AdminCon2" parameter="addStudentDetails" scope="request">
+            <forward name="success" path="addstudentdetails" /> 
+        </action>
+        <action path="/addstudentdetails2" name="StudentRegistrationDto" type="in.pcsacademy.controller.AdminCon2" parameter="addStudentDetails2" scope="request">
+            <forward name="success" path="addstudentdetails2" />            
+        </action>
+        <action path="/addstudentdetails3" name="StudentRegistrationDto" type="in.pcsacademy.controller.AdminCon2" parameter="addStudentDetails3" scope="request">
+            <forward name="success" path="addstudentdetails3" />            
+        </action>
+        <action path="/payViewSearch-StudentDuePayment" type="org.apache.struts.actions.ForwardAction" parameter="payViewSearch-StudentDuePayment"/>               
+        <action path="/studentFeedBackInsertion" type="org.apache.struts.actions.ForwardAction" parameter="studentFeedBackInsertion"/>               
+        <action path="/viewSearch-StudentFeedBack" type="org.apache.struts.actions.ForwardAction" parameter="viewSearch-StudentFeedBack"/>               
+        <action name="SendMsgDto" path="/viewcontactmsg" type="in.pcsacademy.controller.AdminCon2" parameter="viewContactMsg" scope="request">
+            <forward name="success" path="viewcontactmsg" />
+        </action>        
+        <action path="/viewSearchEditDelete-Student" name="StudentRegistrationDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="viewStudentDetails">
+            <forward name="success" path="viewSearchEditDelete-Student" />            
+        </action>
+        <action path="/showStudentRegnDetails" name="StudentRegistrationDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="showStudentRegnDetails">
+            <forward name="success" path="showStudentRegnDetails" />            
+        </action>
+        <action path="/showStudentLoginDetails" name="StudentRegistrationDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="showStudentLoginDetails">
+            <forward name="success" path="showStudentLoginDetails" />            
+        </action>
+        
+        <action path="/payViewSearch-StudentDuePayment" name="StudentPaymentDto" type="in.pcsacademy.controller.AdminCon2" scope="request" parameter="studentPayment">
+            <forward name="success" path="viewAllStudentPayment"/>
+        </action>
+        
+        
+       
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>
